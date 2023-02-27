@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/logo.png";
+// import logo from "../public/logo.png";
+import logo from "../public/sBloggerLogo.png";
 
 function Header() {
   return (
     // background color to match logo: #2c3032
-    <header className="flex justify-between px-5 max-w-7xl mx-auto">
+    <header className="flex justify-between px-5 max-w-7xl mx-auto bg-gray-500">
       <div className="flex items-center space-x-5">
         <Link href="/">
           <Image
-            className="w-44 object-contain cursor-pointer"
+            className="w-40 object-contain cursor-pointer"
             src={logo}
             alt="Logo"
           />
