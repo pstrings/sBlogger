@@ -58,6 +58,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       post,
     },
+    revalidate: 600, //after 600 seconds (10 minutes), it'll update the old cache
   };
 };
 
