@@ -13,11 +13,13 @@ const Banner = () => {
           What is the theme of my blog? Nothing! Themes kills creativity!!
         </h3>
       </div>
-      <Image
-        className="hidden md:inline-flex w-20 h-32 lg:h-48 lg:w-44"
-        src={sLogo}
-        alt="Image of letter S"
-      />
+      <div className="mr-12">
+        <Image
+          className="hidden md:inline-flex w-20 h-32 lg:h-48 lg:w-44"
+          src={sLogo}
+          alt="Image of letter S"
+        />
+      </div>
     </div>
   );
 };
