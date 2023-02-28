@@ -10,6 +10,12 @@ export default defineType({
       title: 'Title',
       type: 'string',
     }),
+    // added description field in the schema
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    }),
     defineField({
       name: 'slug',
       title: 'Slug',

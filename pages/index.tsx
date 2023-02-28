@@ -1,8 +1,35 @@
 import Head from "next/head";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
+import { sanityClient, urlFor } from "../sanity";
+import { Post } from "../typings";
+import Link from "next/link.js";
+import Image from "next/image";
 
-export default function Home() {
+// server side rendering the page and quering data from sanity cms
+export const getServerSideProps = async () => {
+  const query = `*[_type == "post"]{
+    _id,
+    title,
+    author -> {
+      name,
+      image
+    },
+    description,
+    mainImage,
+    slug
+  }`;
+
+  const posts = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+export default function Home({ posts }: { posts: Post }) {
   return (
     <div className="max-w-7xl mx-auto">
       <Head>
@@ -13,7 +40,22 @@ export default function Home() {
       </Head>
       <Header />
       <Banner />
-      <main></main>
+      <main>{/* Posts */}</main>
+      {/* have to wrap the posts in fragment otherwise we'll get type error */}
+      <div>
+        <>
+          {posts.map((post) => (
+            <Link key={post._id} href={`/post/${post.slug.current}`}>
+              <Image
+                height={300}
+                width={300}
+                src={urlFor(post.mainImage).url()!}
+                alt={`${post.title} image`}
+              />
+            </Link>
+          ))}
+        </>
+      </div>
     </div>
   );
 }
