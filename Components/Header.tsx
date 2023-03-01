@@ -17,8 +17,7 @@ function Header() {
         </div>
         <div className="flex items-center space-x-5">
           <nav className="hidden md:inline-flex items-center space-x-5">
-            <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
             <Link
               href="#"
               className="text-white bg-green-600 px-4 py-1 rounded-full"
