@@ -51,3 +51,10 @@ export type IFormInput = {
   email: string;
   comment: string;
 };
+
+export type Config = {
+  dataset: string;
+  projectId: string;
+  useCdn: string;
+  token: string;
+};
