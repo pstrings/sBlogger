@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import { sanityClient, urlFor } from "@/sanity";
-import { Post } from "@/typings";
+import { IndividualPost, Post } from "@/typings";
 import { GetStaticProps } from "next";
+import Image from "next/image";
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "post"]{
@@ -62,10 +63,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-const Post = ({ post }: { post: Post }) => {
+const Post = ({ post }: { post: IndividualPost }) => {
   return (
     <main>
       <Header />
+      {/* <Image src={urlFor(post)} alt="" width={1000} height={1000} /> */}
     </main>
   );
 };
