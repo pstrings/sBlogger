@@ -44,3 +44,10 @@ export type IndividualPost = {
   };
   body: object[];
 };
+
+export type IFormInput = {
+  _id: string;
+  name: string;
+  email: string;
+  comment: string;
+};
