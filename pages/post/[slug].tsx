@@ -41,6 +41,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         ],
         description,
         mainImage,
+        subImage,
         slug,
         body
       }`;
@@ -67,7 +68,13 @@ const Post = ({ post }: { post: IndividualPost }) => {
   return (
     <main>
       <Header />
-      {/* <Image src={urlFor(post)} alt="" width={1000} height={1000} /> */}
+      <Image
+        className="w-full h-40 object-cover"
+        src={urlFor(post.subImage).url()}
+        alt={`${post.title} Image`}
+        width={1000}
+        height={1000}
+      />
     </main>
   );
 };

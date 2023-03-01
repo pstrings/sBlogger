@@ -40,6 +40,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'subImage',
+      title: 'Sub image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',

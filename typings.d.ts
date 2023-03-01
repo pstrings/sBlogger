@@ -34,6 +34,11 @@ export type IndividualPost = {
       url: string;
     };
   };
+  subImage: {
+    asset: {
+      url: string;
+    };
+  };
   slug: {
     current: string;
   };
