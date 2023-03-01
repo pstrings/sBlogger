@@ -58,7 +58,10 @@ export default function Home({ posts }: { posts: Post }) {
                 <div>
                   <p className="text-lg font-bold">{post.title}</p>
                   <p className="text-xs">
-                    {post.description} by {post.author.name}
+                    {post.description}{" "}
+                    <span className="italic font-semibold">
+                      -by {post.author.name}
+                    </span>
                   </p>
                 </div>
                 <Image
