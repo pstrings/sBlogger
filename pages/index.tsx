@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/header";
+import Header from "@/components/header";
 import Banner from "@/components/banner";
 import { sanityClient, urlFor } from "../sanity";
 import { Post } from "../typings";
