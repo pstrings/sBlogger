@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "@/components/Header";
-import Banner from "@/components/Banner";
+import Header from "@/components/header";
+import Banner from "@/components/banner";
 import { sanityClient, urlFor } from "../sanity";
 import { Post } from "../typings";
 import Link from "next/link.js";
