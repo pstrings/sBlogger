@@ -1,4 +1,4 @@
-import Header from "@/Components/Header";
+import Header from "@/components/header";
 import { sanityClient, urlFor } from "@/sanity";
 import { IndividualPost, Post } from "@/typings";
 import { GetStaticProps } from "next";
