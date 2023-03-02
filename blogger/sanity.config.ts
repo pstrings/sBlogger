@@ -10,7 +10,12 @@ export default defineConfig({
   projectId: '4iaqkl34',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [
+    deskTool(),
+    visionTool({
+      defaultApiVersion: 'v2023-03-02',
+    }),
+  ],
 
   schema: {
     types: schemaTypes,
